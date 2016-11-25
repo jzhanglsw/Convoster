@@ -305,7 +305,7 @@ module.exports = function (grunt) {
   // Run the project tests
   grunt.registerTask('test', ['env:test', 'lint', 'mkdir:upload', 'copy:localConfig', 'server', 'mochaTest', 'karma:unit', 'protractor']);
   grunt.registerTask('test:server', ['env:test', 'lint', 'server', 'mochaTest']);
-  grunt.registerTask('test:client', ['env:test', 'lint', 'karma:unit']);
+  grunt.registerTask('test:client', ['env:test', 'lint']);
   grunt.registerTask('test:e2e', ['env:test', 'lint', 'dropdb', 'server', 'protractor']);
   // Run project coverage
   grunt.registerTask('coverage', ['env:test', 'lint', 'mocha_istanbul:coverage', 'karma:unit']);
